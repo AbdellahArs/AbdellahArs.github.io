@@ -242,8 +242,9 @@ ul li a:hover::after {
 .about-text p {
     color: #fff;
     letter-spacing: 1.5px;
-    line-height: 25px;
+    line-height: 1.5;
     font-size: 18px;
+    font-weight: 600;
     padding: 0 35px 0 0;
 }
 
@@ -338,6 +339,7 @@ ul li a:hover::after {
     letter-spacing: 1.5px;
     line-height: 25px;
     font-size: 18px;
+    font-weight: 600;
     text-align: left;
 }
 
@@ -375,6 +377,7 @@ ul li a:hover::after {
     letter-spacing: 1.5px;
     line-height: 25px;
     font-size: 18px;
+    font-weight: 600;
     text-align: left;
 }
 
@@ -467,7 +470,7 @@ ul li a:hover::after {
     margin-bottom: 15px;
 }
 
-.contact .email a {
+.contact .email p {
     color: #fff;
     font-size: 20px;
    
@@ -645,6 +648,10 @@ ul li a:hover::after {
     .portfolio {
         padding: 20px ;
     }
+
+    .contact {
+        min-height: 100vh;
+    }
 }
 
 @media (max-width: 320px) {
@@ -676,9 +683,7 @@ ul li a:hover::after {
     font-size: 35px;
     }
 
-    .contact {
-        min-height: 100vh;
-    }
+   
 
     .social-contact a {
         margin: 13px;
