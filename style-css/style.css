@@ -98,12 +98,13 @@ ul li a:hover::after {
     min-height: 100vh;
     width: 100%;
     color: #fff;   
+    position: relative;
 }
 
 .home .home-text {
     position: absolute;
-    bottom: 190px;
-    left: 140px;
+    bottom: 15%;
+    left: 15%;
 }
 
 .home-text h4 {
@@ -139,6 +140,66 @@ ul li a:hover::after {
     font-size: 40px;
     color: #ffc70c;
     letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    position: relative;
+    background: transparent;
+    width: 160px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-image: conic-gradient(transparent, transparent, transparent, #ffc70c);
+    animation: rotate 4s linear infinite;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-image: conic-gradient(transparent, transparent, transparent, #ffc70c);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn a {
+    color: #ffc70c;
+    background: #050505;
+    width: 152px;
+    height: 39px;
+    z-index: 10;
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 .social-icons {
@@ -515,8 +576,8 @@ ul li a:hover::after {
 
 @media (max-width: 991.98px) {
     .home .home-text {
-        bottom: 100px;
-        left: 100px;
+        bottom: 15%;
+        left: 10%;
     }
 
     .home-text h3 {
@@ -622,6 +683,11 @@ ul li a:hover::after {
 }
 
 @media (max-width: 575.98px) {
+    .home .home-text {
+        top: 35%;
+        left: 10%;
+    }
+
     .about-text h2,
     .services .title h2,
     .portfolio .main-text h2{
